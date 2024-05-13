@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body {
+    background-image: url(homepage-background.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+.container h1 {
+    color: white;
+    background-color: bisque;
+    margin-bottom: 10px;
+}
+
+.container a {
+    background-color: rgb(0, 0, 0);
+    padding: 8px;
+    border-radius: 1;
+}
