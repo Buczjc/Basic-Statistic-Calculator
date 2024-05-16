@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Statistic Calculator</title>
+    <link rel="shortcut icon" href="images/Basic_Statistic_Calculator_Page_Logo.png" type="icon">
     <style>
         * {
     margin: 0;
@@ -52,16 +53,23 @@ body {
     bottom: 10px;
 }
 
-.submit-func {
-    width: 90px;
-    color: blueviolet;
+.btn-func input[type="submit"] {
+    margin-right: 10px;
 }
 
-.btn-func input {
+.btn-func input[type="reset"] {
+    margin-left: 10px;
+}
+
+.btn-func input[type="reset"], input[type="submit"] {
     width: 100px;
-    margin: 5px;
     position: relative;
-    bottom: 5px;
+    top: 30px;
+} 
+
+.btn-func {
+    display: flex;
+    justify-content: center;
 }
 
 .container p {
@@ -82,17 +90,16 @@ body {
         <h2 class="logo">Basic Statistic Calculator</h2>
 
         <div class="form">
-            <form action="calculate.php" method="post">
+            <form action="output.php" method="post">
             <label for="form-element" class="Enter-field">Enter a Data Set</label><br>
-            <input type="text" name="" id="form-element" class="input-text">
+            <input type="text" name="data_set" id="form-element" class="input-text" required>
+
+            <div class="btn-func">
+                <input type="submit" value="submit" name="submit">
+                <input type="reset" value="clear">
+            </div>
+
             </form>
-        </div>
-
-        
-
-        <div class="btn-func">
-            <input type="submit" value="Submit">
-            <input type="submit" value="Clear">
         </div>
 
         <p>&#9755; NOTE: Enter data separated by spaces.</p>
